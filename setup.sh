@@ -4,12 +4,14 @@
 
 # COMMANDS
 arr1=()
-#arr+=("sudo apt-get install software-properties-common")
-#arr+=('sudo add-apt-repository -y ppa:ethereum/ethereum')
-#arr+=('sudo apt-get update')
-#arr+=('sudo apt-get install ethereum')
+arr1+=("sudo apt-get install software-properties-common")
+arr1+=('sudo add-apt-repository -y ppa:ethereum/ethereum')
+arr1+=('sudo apt-get update')
+arr1+=('sudo apt-get install ethereum')
 arr1+=('sudo apt-get install supervisor')
 arr1+=('sudo service supervisor restart')
+
+doCommands "${arr1[@]}"
 
 HOME=`eval echo "~$different_user"`
 ETH_DATA_DIR='ethdata'
